@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block title %} | {{ article.title }} {% endblock %}
+{% block body %}
+
+    <div class="row">
+    <div class="col-md-10 offset-md-3">
+        <div class="col-lg-8">
+        <!-- Post content-->
+            <article>
+                <!-- Post header-->
+                <header class="mb-4">
+                    <!-- Post title-->
+                    <h1 class="fw-bolder mb-1">{{ article.title }}</h1>
+                    <!-- Post meta content-->
+                    <div class="text-muted fst-italic mb-2">Опубликовано {{article.created_date}} автором {{article.author.username}}</div>
+                    <!-- Post categories-->
+                    <!--- <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
+                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a> --->
+                </header>
+                <!-- Preview image figure-->
+                {% if article.article_image %}
+                    <figure class="mb-4"><img class="img-fluid rounded" src="{{ article.article_image.url }}" style="width:100%;height:100%;" alt="..." /></figure>
+                <!-- Post content-->
+                {% else %}
+                {% endif %}
+                <section class="mb-5">
+                    {{article.content | safe}}
+                </section>
+            </article>
+            <hr>
+
+    </div>
+</div>
+    
+
+{% endblock %}
