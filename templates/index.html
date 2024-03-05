@@ -1,18 +1,19 @@
 {% extends 'layout.html' %}
 {% block body %}
-    <div class='container'>
-        <p>
-            <script charset="utf-8" type="text/javascript" src="//www.tezbilet.kg/iframe.js"></script>
-        </p>
-    </div>
 
-    <div class="container">
+    <div class="container-fluid">
+        <p>
+        <script charset="utf-8" type="text/javascript" src="//www.tezbilet.kg/iframe.js"></script> 
+        </p>
+    
         <div class="text-center my-5">
             <h2 style="color:red;" class="fw-bolder">Блог: все интересные факты и статьи здесь!</h2>
         </div>
     </div>
 
 
+
+<div class="container">
     <section id="article">
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% if articles %}
@@ -40,6 +41,13 @@
             </center>
     </div>
     </section>
+</div>
     
     
  {% endblock %}
+
+
+
+
+
+        
