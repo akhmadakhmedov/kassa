@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ta5xax*pm!_=25ja%gg^=qk@*&v62$240w3t)*q572*p&05=(v
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tezbilet.kg', 'www.tezbilet.kg']
 
 
 # Application definition
