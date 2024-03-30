@@ -3,7 +3,7 @@ from .models import Article
 
 
 def index(request):
-    articles = Article.objects.all()
+    articles = Article.objects.filter(main_article=True)
     context = {"articles": articles}
     return render(request, 'index.html', context)
 
