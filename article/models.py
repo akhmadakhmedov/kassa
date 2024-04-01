@@ -5,7 +5,7 @@ from imagekit.processors import ResizeToFill
 
 class Article(models.Model):
     author = models.ForeignKey('auth.user', on_delete=models.CASCADE, verbose_name='Автор')
-    title = models.CharField(max_length=50, verbose_name="Заголовок")
+    title = models.CharField(max_length=100, verbose_name="Заголовок")
     content = RichTextField(verbose_name="Содержание")
     created_date = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания")
     article_image = ProcessedImageField(upload_to='blog_photos',
