@@ -21,7 +21,7 @@
             {% for article in articles %}
                 <div class="card">
                     <div class="article__thumbnail article__item">
-                    <img class="article__thumbnail__img" src="{{ article.article_image_thumbnail.url }}"/>
+                        <a style="center" href="{% url 'article:detail' article.id %}"><img class="article__thumbnail__img" src="{{ article.article_image_thumbnail.url }}"/></a>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">{{ article.title }}</h5>
